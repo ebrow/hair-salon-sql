@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ClientTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-28T17:57:46" hostname="woof-ThinkPad.local" time="0.441">
+  <properties/>
+  <testcase name="find_findsClientInDatabase_true" classname="ClientTest" time="0.166"/>
+  <testcase name="save_savesStylistIdIntoDB_true" classname="ClientTest" time="0.051"/>
+  <testcase name="update_updateClientInDatabase" classname="ClientTest" time="0.051"/>
+  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.027"/>
+  <testcase name="find_findNameofStylistWithStylistID" classname="ClientTest" time="0.043"/>
+  <testcase name="equals_returnsTrueIfClientsAretheSame" classname="ClientTest" time="0.009"/>
+  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.044"/>
+  <testcase name="delete_deleteClientInDatabase" classname="ClientTest" time="0.046"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

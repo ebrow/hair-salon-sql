@@ -1,0 +1,56 @@
+<h1>Noah and Frans New York</h1>
+
+<h2>Celebrity Stylists</h2>
+
+<form action='/new-stylist' method='post'>
+  <input type="hidden" name="id" value="$stylist.getId">
+  <div class="form-group">
+    <input id="stylistName" name="stylistName" class="form-control" type="text" required="true" placeholder="Name">
+  </select>
+  </div>
+      <button type="submit" class="btn btn-info">Join Us!</button>
+</form>
+
+<h2>Client Application</h2>
+
+<h3>Enter name and phone number</h3>
+
+<form action='/new-client' method='post'>
+  <input type="hidden" name="id" value="$client.getId">
+  <div class="form-group">
+    <input id="clientName" name="clientName" class="form-control" type="text" required="true" placeholder="Name">
+    <input type="text" class="form-control" name="clientPhone" id="clientPhone" placeholder="Phone">
+    <select id="stylistId" name="stylistId" type="text">
+     #foreach($stylist in $stylists)
+      <option value="$stylist.getId()">$stylist.getName()</option>
+    #end
+  </select>
+  </div>
+      <button type="submit" class="btn btn-info">Sumbit</button>
+</form>
+
+<table class="table table-striped">
+  <tr>
+    <td>Name</td>
+    <td>Phone</td>
+    <td>Stylist Name</td>
+    <td>Delete</td>
+    <td>Edit</td>
+  </tr>
+  #foreach($client in $clients)
+    <tr>
+      <td>$client.getName()</td>
+      <td>$client.getPhone()</td>
+      <td>$client.getStylistName()</td>
+      <td><form action="/client/$client.getId()/delete" method="post">
+        <button type="submit" class="btn btn-primary">
+        <i class="glyphicon glyphicon-trash"></i></span>
+      </form></td>
+
+      <td><form action="/client/$client.getId()/update" method="get">
+        <button type="submit" class="btn btn-primary">
+        <i class="glyphicon glyphicon-pencil"></i></span>
+      </form></td>
+    </tr>
+  #end
+</table>
